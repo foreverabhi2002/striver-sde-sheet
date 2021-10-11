@@ -3,36 +3,36 @@ using namespace std;
 
 // First Solution
 // By sorting the array
-// Time Complexity: O(n)
+// Time Complexity: O(nlog n)
 // Space Complexity: O(1)
 
-int main() {
-	int n;
-	cin>>n;
-	vector <int> nums;
-	for(int i=0;i<n;i++) {
-		int el;
-		cin>>el;
-		nums.push_back(el);
-	}
-	sort(nums.begin(),nums.end());
-	int missing=-1,r=-1,repeating=-1;
-	for(int i=0;i<n;i++) {
-		if(r==nums[i]) {
-			repeating=nums[i];
-			break;
-		}
-		r=nums[i];
-	}
-	for(int i=0;i<n;i++) {
-		if(nums[i]!=i+1 && nums[i-1]!=repeating) {
-			missing=i+1;
-			break;
-		}
-	}
-	cout<<"Missing = "<<missing<<", Repeating = "<<repeating;
-	return 0;
-}
+// int main() {
+// 	int n;
+// 	cin>>n;
+// 	vector <int> nums;
+// 	for(int i=0;i<n;i++) {
+// 		int el;
+// 		cin>>el;
+// 		nums.push_back(el);
+// 	}
+// 	sort(nums.begin(),nums.end());
+// 	int missing=-1,r=-1,repeating=-1;
+// 	for(int i=0;i<n;i++) {
+// 		if(r==nums[i]) {
+// 			repeating=nums[i];
+// 			break;
+// 		}
+// 		r=nums[i];
+// 	}
+// 	for(int i=0;i<n;i++) {
+// 		if(nums[i]!=i+1 && nums[i-1]!=repeating) {
+// 			missing=i+1;
+// 			break;
+// 		}
+// 	}
+// 	cout<<"Missing = "<<missing<<", Repeating = "<<repeating;
+// 	return 0;
+// }
 
 // Second Solution
 // Time Complexity: O(2n) => ~O(n)
