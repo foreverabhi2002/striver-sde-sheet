@@ -62,6 +62,12 @@ void merge(vector <int> a1, vector <int> a2, int n1, int n2) {
 			a2[k-1]=first;
 		}
 	}
+	cout<<endl;
+	for(auto it:a1)
+		cout<<it<<" ";
+	cout<<endl;
+	for(auto it:a2)
+		cout<<it<<" ";
 }
 
 int main() {
@@ -80,11 +86,5 @@ int main() {
 		a2.push_back(el);
 	}
 	merge(a1,a2,n1,n2);
-	cout<<endl;
-	for(auto it:a1)
-		cout<<it<<" ";
-	cout<<endl;
-	for(auto it:a2)
-		cout<<it<<" ";
 	return 0;
 }
